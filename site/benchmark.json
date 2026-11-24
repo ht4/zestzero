@@ -1,0 +1,138 @@
+{
+  "status": "measured",
+  "dataset": "ContractNLI",
+  "source": "https://stanfordnlp.github.io/contract-nli/",
+  "license": "CC BY 4.0",
+  "model": "TF-IDF + supervised logistic regression",
+  "train_documents": 423,
+  "test_documents": 123,
+  "train_span_pairs": 49999,
+  "test_queries": 1188,
+  "metrics": {
+    "lexical": {
+      "hit1": 0.361953,
+      "hit3": 0.582492,
+      "recall3": 0.414184
+    },
+    "trained": {
+      "hit1": 0.828283,
+      "hit3": 0.948653,
+      "recall3": 0.803077
+    }
+  },
+  "examples": [
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-1",
+      "gold_span_ids": [
+        25
+      ],
+      "ranked_span_ids": [
+        25,
+        34,
+        48
+      ],
+      "hit_at_3": true
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-12",
+      "gold_span_ids": [
+        63,
+        67
+      ],
+      "ranked_span_ids": [
+        67,
+        63,
+        25
+      ],
+      "hit_at_3": true
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-13",
+      "gold_span_ids": [
+        63,
+        66
+      ],
+      "ranked_span_ids": [
+        66,
+        63,
+        40
+      ],
+      "hit_at_3": true
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-15",
+      "gold_span_ids": [
+        45
+      ],
+      "ranked_span_ids": [
+        45,
+        47,
+        46
+      ],
+      "hit_at_3": true
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-16",
+      "gold_span_ids": [
+        84,
+        85,
+        86
+      ],
+      "ranked_span_ids": [
+        84,
+        86,
+        85
+      ],
+      "hit_at_3": true
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-17",
+      "gold_span_ids": [
+        60
+      ],
+      "ranked_span_ids": [
+        59,
+        53,
+        40
+      ],
+      "hit_at_3": false
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-19",
+      "gold_span_ids": [
+        76
+      ],
+      "ranked_span_ids": [
+        86,
+        76,
+        63
+      ],
+      "hit_at_3": true
+    },
+    {
+      "document_id": "1",
+      "hypothesis_id": "nda-2",
+      "gold_span_ids": [
+        25,
+        32
+      ],
+      "ranked_span_ids": [
+        25,
+        31,
+        48
+      ],
+      "hit_at_3": true
+    }
+  ],
+  "scope": "Evidence retrieval on official train/test splits; excludes NotMentioned; no entailment classification, LLM or legal advice. No raw document text exported.",
+  "archive_sha256": "e03fc77bbf8b53e2976a250e81d8a294bc3d5e5fb014521e477dee9340d6287b",
+  "executed_at": "2026-11-24T21:02:41.874717+00:00",
+  "sklearn_version": "1.9.1"
+}

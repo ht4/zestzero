@@ -1,0 +1,17 @@
+{
+  "title": "Confidentiality across legal matters",
+  "context": "In 2026 Chile's competition authority approved Itaú's acquisition of Klap subject to mitigation measures addressing the transfer of commercially sensitive information between competitors. This lab uses fictional matters to illustrate the general information-barrier problem, not to assess those companies.",
+  "sources": [
+    {"name":"FNE — Chilean merger review (2026)","url":"https://www.fne.gob.cl/fne-aprueba-adquisicion-de-control-de-klap-por-parte-del-banco-itau/"},
+    {"name":"Harvey — Ethical wall enforcement","url":"https://www.harvey.ai/blog/building-ethical-wall-enforcement-into-harvey"},
+    {"name":"LemonTech — Information security, privacy and AI policy","url":"https://www.lemontech.com/legal/politica-de-seguridad-de-la-informacion"},
+    {"name":"OWASP AISVS v1.0 — Access control","url":"https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md"},
+    {"name":"OWASP — RAG security guidance","url":"https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html"}
+  ],
+  "documents": [
+    {"id":"A-1","matter":"A","topic":"notice","version":1,"text":"Synthetic distribution agreement: notice period is 120 days.","active":false},
+    {"id":"A-2","matter":"A","topic":"notice","version":2,"text":"Synthetic signed amendment: notice period is 60 days.","active":true},
+    {"id":"B-1","matter":"B","topic":"pricing","version":1,"text":"Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.","active":true},
+    {"id":"P-1","matter":"PUBLIC","topic":"public","version":1,"text":"Chile's competition authority approved Itaú's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.","active":true}
+  ]
+}

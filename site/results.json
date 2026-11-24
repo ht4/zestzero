@@ -1,0 +1,395 @@
+{
+  "case": {
+    "title": "Confidentiality across legal matters",
+    "context": "In 2026 Chile's competition authority approved Ita\u00fa's acquisition of Klap subject to mitigation measures addressing the transfer of commercially sensitive information between competitors. This lab uses fictional matters to illustrate the general information-barrier problem, not to assess those companies.",
+    "sources": [
+      {
+        "name": "FNE \u2014 Chilean merger review (2026)",
+        "url": "https://www.fne.gob.cl/fne-aprueba-adquisicion-de-control-de-klap-por-parte-del-banco-itau/"
+      },
+      {
+        "name": "Harvey \u2014 Ethical wall enforcement",
+        "url": "https://www.harvey.ai/blog/building-ethical-wall-enforcement-into-harvey"
+      },
+      {
+        "name": "LemonTech \u2014 Information security, privacy and AI policy",
+        "url": "https://www.lemontech.com/legal/politica-de-seguridad-de-la-informacion"
+      },
+      {
+        "name": "OWASP AISVS v1.0 \u2014 Access control",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md"
+      },
+      {
+        "name": "OWASP \u2014 RAG security guidance",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html"
+      }
+    ]
+  },
+  "runs": {
+    "baseline": {
+      "version": "baseline",
+      "executed_at": "2026-11-24T21:14:47.780689+00:00",
+      "total": 9,
+      "passed": 3,
+      "failed": 6,
+      "decision": "BLOCK",
+      "checks": [
+        {
+          "id": "ZZ-01",
+          "name": "Authorized retrieval",
+          "severity": "medium",
+          "control": "ISO A.5.15 / AISVS 5.2.2",
+          "expected": "Authorized document returned",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "A-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "181b6a34ed7dc94af42988f358ed87a1a2a51dc8e8c15bfb3a5330309266de44"
+          },
+          "passed": true,
+          "action": "Confirm legitimate users can retrieve the current contract.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "21062d6db581ee159c3b0bd6c2b9b462042d65d2b0d17536668b69934595dca5"
+        },
+        {
+          "id": "ZZ-02",
+          "name": "Cross-matter isolation",
+          "severity": "critical",
+          "control": "ISO A.5.15 / AISVS 5.2.2",
+          "expected": "No restricted source or content returned",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "B-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "79aa3a60c76043d6bcff749121ed61eaba8b82af1e0fb51b96ac60662de4f3b4"
+          },
+          "passed": false,
+          "action": "Enforce the requesting identity at retrieval.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "90473f4b263ccd8c66f11da9427579d9862770e8adf3472014db1575b3a6c95a"
+        },
+        {
+          "id": "ZZ-03",
+          "name": "Derived summary isolation",
+          "severity": "critical",
+          "control": "ISO A.5.15 / OWASP RAG",
+          "expected": "Derived summary denied across matters",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "B-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "79aa3a60c76043d6bcff749121ed61eaba8b82af1e0fb51b96ac60662de4f3b4"
+          },
+          "passed": false,
+          "action": "Recheck source permissions when reading generated content.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "d376647b66167592c0ebc529c96c2dc6bc8aa9ce9a4c6bc6a57ef7732bc020f1"
+        },
+        {
+          "id": "ZZ-04",
+          "name": "Revoked access to summary",
+          "severity": "high",
+          "control": "ISO A.5.18 / OWASP RAG",
+          "expected": "Previously authorized summary denied after revocation",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "B-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "79aa3a60c76043d6bcff749121ed61eaba8b82af1e0fb51b96ac60662de4f3b4"
+          },
+          "passed": false,
+          "action": "Invalidate or reauthorize stored content after revocation.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "435a7651963906f52f981a615b6bf8a48ce81a9894ec644bef808ff57202158b"
+        },
+        {
+          "id": "ZZ-05",
+          "name": "Revoked access to source",
+          "severity": "high",
+          "control": "ISO A.5.18 / OWASP RAG",
+          "expected": "Source not returned after revocation",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "B-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "79aa3a60c76043d6bcff749121ed61eaba8b82af1e0fb51b96ac60662de4f3b4"
+          },
+          "passed": false,
+          "action": "Apply current grants on every retrieval.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "b6a33dd7c0160a4a78e6328ddda3fc8cd44286c16cd5669c1d03d880f225a9b9"
+        },
+        {
+          "id": "ZZ-06",
+          "name": "Current contract version",
+          "severity": "high",
+          "control": "ISO A.5.33 / document integrity",
+          "expected": "Active amendment A-2 (60 days)",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "A-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "181b6a34ed7dc94af42988f358ed87a1a2a51dc8e8c15bfb3a5330309266de44"
+          },
+          "passed": false,
+          "action": "Exclude superseded clauses; preserve source identifiers.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "6e8c574f6da533397511b3607dbcd16d9ef9cf829650ad178299c8abbf9a246b"
+        },
+        {
+          "id": "ZZ-07",
+          "name": "Unsupported assertion",
+          "severity": "medium",
+          "control": "OWASP RAG / output validation",
+          "expected": "Abstain when no supporting document exists",
+          "observed": {
+            "status": "answered",
+            "source_ids": [],
+            "content_returned": true,
+            "content_sha256": "97e9abf1b5a4debfbda2ab2fb2a31506bf998c1d90e83a964c7ebe8a17ac6e5b"
+          },
+          "passed": false,
+          "action": "Abstain when no supporting document exists.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "b6296e2500560e54585646f221efe2d8699bfe6a640562d04eecd1429e408b15"
+        },
+        {
+          "id": "ZZ-08",
+          "name": "Public context retrieval",
+          "severity": "medium",
+          "control": "ISO A.5.15 / AISVS 5.2.2",
+          "expected": "Public reference P-1 returned",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "P-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "7ab11ca729a2f21bb7048c5facd9d3ae1c683223763f1682d8bf10ad3a27c915"
+          },
+          "passed": true,
+          "action": "Keep permitted public context available.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "f0c32ceed1748aec7e26580a4d78267e69e203dbde8d6b9dfd008d06d61924a8"
+        },
+        {
+          "id": "ZZ-09",
+          "name": "Unknown identity denied",
+          "severity": "high",
+          "control": "ISO A.5.16 / AISVS 5.2.2",
+          "expected": "Unknown identity denied",
+          "observed": {
+            "status": "denied",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Reject identities not in the laboratory directory.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "20a5a59b04b7391c20d8e035982f13b936c5d22b1d6090bae7a28be864fc2a84"
+        }
+      ]
+    },
+    "corrected": {
+      "version": "corrected",
+      "executed_at": "2026-11-24T21:14:47.780931+00:00",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "decision": "READY FOR HUMAN REVIEW",
+      "checks": [
+        {
+          "id": "ZZ-01",
+          "name": "Authorized retrieval",
+          "severity": "medium",
+          "control": "ISO A.5.15 / AISVS 5.2.2",
+          "expected": "Authorized document returned",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "A-2"
+            ],
+            "content_returned": true,
+            "content_sha256": "6c570970e820c03582a36e8f8e116f9579e465e8c84c85966acb90096d2377b7"
+          },
+          "passed": true,
+          "action": "Confirm legitimate users can retrieve the current contract.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "df2a75cf17d62ca47fe35000e06344443384b6cd445bdfaaef3e25200bf0637e"
+        },
+        {
+          "id": "ZZ-02",
+          "name": "Cross-matter isolation",
+          "severity": "critical",
+          "control": "ISO A.5.15 / AISVS 5.2.2",
+          "expected": "No restricted source or content returned",
+          "observed": {
+            "status": "abstain",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Enforce the requesting identity at retrieval.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "30be5278a0166ec108316e5cd4451c6e597f6734771c1d18147e7a1e9523b27a"
+        },
+        {
+          "id": "ZZ-03",
+          "name": "Derived summary isolation",
+          "severity": "critical",
+          "control": "ISO A.5.15 / OWASP RAG",
+          "expected": "Derived summary denied across matters",
+          "observed": {
+            "status": "denied",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Recheck source permissions when reading generated content.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "41ee900121f704b9639b06cb084d189ef3c2f2e5294ca857986200a16052339f"
+        },
+        {
+          "id": "ZZ-04",
+          "name": "Revoked access to summary",
+          "severity": "high",
+          "control": "ISO A.5.18 / OWASP RAG",
+          "expected": "Previously authorized summary denied after revocation",
+          "observed": {
+            "status": "denied",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Invalidate or reauthorize stored content after revocation.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "806064280f8a93078ca9a23a9c477fe6c2f48a6456b05326cc815729af1e5ab5"
+        },
+        {
+          "id": "ZZ-05",
+          "name": "Revoked access to source",
+          "severity": "high",
+          "control": "ISO A.5.18 / OWASP RAG",
+          "expected": "Source not returned after revocation",
+          "observed": {
+            "status": "abstain",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Apply current grants on every retrieval.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "6312ea8f109baa64e0811299421ebb11d982cd3c38b4b37724492a4612016452"
+        },
+        {
+          "id": "ZZ-06",
+          "name": "Current contract version",
+          "severity": "high",
+          "control": "ISO A.5.33 / document integrity",
+          "expected": "Active amendment A-2 (60 days)",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "A-2"
+            ],
+            "content_returned": true,
+            "content_sha256": "6c570970e820c03582a36e8f8e116f9579e465e8c84c85966acb90096d2377b7"
+          },
+          "passed": true,
+          "action": "Exclude superseded clauses; preserve source identifiers.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "964803b6266328f392c481e59727def685f00b1473e071f6562824f4e388777a"
+        },
+        {
+          "id": "ZZ-07",
+          "name": "Unsupported assertion",
+          "severity": "medium",
+          "control": "OWASP RAG / output validation",
+          "expected": "Abstain when no supporting document exists",
+          "observed": {
+            "status": "abstain",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Abstain when no supporting document exists.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "0d96826844aeba10b2ab32e4bea26a960aa0e61748339ad2a882d9950cf3be26"
+        },
+        {
+          "id": "ZZ-08",
+          "name": "Public context retrieval",
+          "severity": "medium",
+          "control": "ISO A.5.15 / AISVS 5.2.2",
+          "expected": "Public reference P-1 returned",
+          "observed": {
+            "status": "answered",
+            "source_ids": [
+              "P-1"
+            ],
+            "content_returned": true,
+            "content_sha256": "7ab11ca729a2f21bb7048c5facd9d3ae1c683223763f1682d8bf10ad3a27c915"
+          },
+          "passed": true,
+          "action": "Keep permitted public context available.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "f0c32ceed1748aec7e26580a4d78267e69e203dbde8d6b9dfd008d06d61924a8"
+        },
+        {
+          "id": "ZZ-09",
+          "name": "Unknown identity denied",
+          "severity": "high",
+          "control": "ISO A.5.16 / AISVS 5.2.2",
+          "expected": "Unknown identity denied",
+          "observed": {
+            "status": "denied",
+            "source_ids": [],
+            "content_returned": false,
+            "content_sha256": null
+          },
+          "passed": true,
+          "action": "Reject identities not in the laboratory directory.",
+          "owner": "Security / Engineering (proposed)",
+          "review": "pending human validation",
+          "evidence_sha256": "20a5a59b04b7391c20d8e035982f13b936c5d22b1d6090bae7a28be864fc2a84"
+        }
+      ]
+    }
+  },
+  "scope": "Synthetic laboratory, deterministic extractive retrieval; no real LLM, authentication, or third-party testing."
+}
