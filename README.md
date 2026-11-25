@@ -50,6 +50,18 @@ These are measurements of evidence ranking for the fixed ContractNLI hypothesis 
 ## Interactive confidentiality playground
 Select an identity, a query and a document or derived-summary operation. The public site explores the 96 combinations actually executed by the Python sandbox (two configurations × four identities × four topics × three operations); the local API can run a selected combination again. The playground intentionally exposes fictional returned text so the user can understand a disclosure. It is separate from the nine recorded release checks and the ContractNLI benchmark, and never accepts external documents or real identities. Revocation concerns the selected restricted matter; the public context is not revoked. These simulated identities are not production authentication. Remediation owners and review status are proposed, not actual assignments or formal closure.
 
+
+<!-- BEGIN ZESTZERO GRC DOCUMENTATION -->
+## GRC operations and ISMS documentation
+
+The independent portfolio laboratory includes a draft operational GRC documentation pack, with indicative ISO/IEC 27001:2022 references:
+
+- [GRC Security Register (XLSX)](docs/grc/security-register.xlsx): asset inventory, risk assessment, risk treatment, third-party due diligence, customer security questionnaires, audit evidence, incident records and security KPIs / SLA tracking.
+- [ISMS documentation](docs/grc/isms-documentation.md): scope, proposed policies and procedures, document version control, LATAM privacy, secure AI use and maintainer validation.
+
+The pack links the recorded laboratory checks to GRC exercises. Risk scores, supplier responses, incidents and SLA examples are simulated. A passing retest does not constitute formal closure, risk acceptance or release approval. No certification, enterprise ISMS implementation or real supplier audit is claimed.
+<!-- END ZESTZERO GRC DOCUMENTATION -->
+
 ---
 
 © 2026 Jofran (@ht4) — ZestZero.
