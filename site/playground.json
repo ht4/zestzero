@@ -1,0 +1,1438 @@
+{
+  "scope": "Synthetic public demonstration; not production authentication or LLM inference.",
+  "executed_at": "2026-11-25T02:22:30.367104+00:00",
+  "scenarios": [
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "public",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-a",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "public",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "analyst-b",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic distribution agreement: notice period is 120 days.",
+        "sources": [
+          "A-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": false,
+      "observed": {
+        "status": "answered",
+        "text": "Unsupported synthetic estimate: 50000.",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "public",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "reviewer",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "public",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "baseline",
+      "user": "unknown",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic signed amendment: notice period is 60 days.",
+        "sources": [
+          "A-2"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic signed amendment: notice period is 60 days.",
+        "sources": [
+          "A-2"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "abstain",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "abstain",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "public",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-a",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "abstain",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "abstain",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "public",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "analyst-b",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic signed amendment: notice period is 60 days.",
+        "sources": [
+          "A-2"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "A-2",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic signed amendment: notice period is 60 days.",
+        "sources": [
+          "A-2"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "B-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Synthetic pricing reference: CANARY-B-482; amount 72000 fictional units.",
+        "sources": [
+          "B-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "abstain",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "public",
+      "operation": "document",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "reviewer",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "current_source",
+      "expected_source": "P-1",
+      "passed": true,
+      "observed": {
+        "status": "answered",
+        "text": "Chile's competition authority approved Ita\u00fa's acquisition of Klap with mitigation measures intended to prevent sharing commercially sensitive information between competitors.",
+        "sources": [
+          "P-1"
+        ]
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "notice",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "notice",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "notice",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "pricing",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "pricing",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "pricing",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "budget",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "budget",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "budget",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "public",
+      "operation": "document",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "public",
+      "operation": "summary",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    },
+    {
+      "version": "corrected",
+      "user": "unknown",
+      "topic": "public",
+      "operation": "revoked",
+      "expected": "no_content",
+      "expected_source": null,
+      "passed": true,
+      "observed": {
+        "status": "denied",
+        "text": "",
+        "sources": []
+      }
+    }
+  ]
+}

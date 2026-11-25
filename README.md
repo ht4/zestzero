@@ -1,5 +1,7 @@
 # ZestZero — Legal AI Security Assurance
 
+<img src="site/logo.png" alt="ZestZero logo" width="96">
+
 **Never assume. Always verify.** Independent portfolio laboratory for legal information barriers and reproducible GRC evidence.
 
 ## Why
@@ -12,6 +14,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt -r requirements-ml.txt
 python -m pytest -q
 python -m app.assurance
+python -m app.playground
 python -m uvicorn app.main:app
 ```
 Open http://127.0.0.1:8000. Baseline and corrected modes show actual Python results. Click each check to inspect evidence; export JSON. Local fresh runs use the API. GitHub Pages serves CI-generated snapshots, not a live backend. Configure Settings → Pages → Source → GitHub Actions, then run the “Publish public evidence demo” workflow manually from the Actions tab. The workflow publishes the committed benchmark snapshot and regenerates synthetic security results.
@@ -43,3 +46,6 @@ The local run reported on 2026-11-24 used 423 training contracts, 123 test contr
 | TF-IDF + supervised logistic regression | 82.8% | 94.9% | 80.3% |
 
 These are measurements of evidence ranking for the fixed ContractNLI hypothesis set against its official annotated candidate spans, excluding NotMentioned queries. They are not measurements of general-purpose retrieval, answer correctness or security.
+
+## Interactive confidentiality playground
+Select an identity, a query and a document or derived-summary operation. The public site explores the 96 combinations actually executed by the Python sandbox (two configurations × four identities × four topics × three operations); the local API can run a selected combination again. The playground intentionally exposes fictional returned text so the user can understand a disclosure. It is separate from the nine recorded release checks and the ContractNLI benchmark, and never accepts external documents or real identities. Revocation concerns the selected restricted matter; the public context is not revoked. These simulated identities are not production authentication. Remediation owners and review status are proposed, not actual assignments or formal closure.
