@@ -49,3 +49,8 @@ These are measurements of evidence ranking for the fixed ContractNLI hypothesis 
 
 ## Interactive confidentiality playground
 Select an identity, a query and a document or derived-summary operation. The public site explores the 96 combinations actually executed by the Python sandbox (two configurations × four identities × four topics × three operations); the local API can run a selected combination again. The playground intentionally exposes fictional returned text so the user can understand a disclosure. It is separate from the nine recorded release checks and the ContractNLI benchmark, and never accepts external documents or real identities. Revocation concerns the selected restricted matter; the public context is not revoked. These simulated identities are not production authentication. Remediation owners and review status are proposed, not actual assignments or formal closure.
+
+---
+
+© 2026 Jofran (@ht4) — ZestZero.
+Independent cybersecurity portfolio project.
